@@ -31,7 +31,6 @@ export class HomePage {
       this.latitude = resp.coords.latitude;
       this.longitude = resp.coords.longitude;
   
-      // Guarda las coordenadas en Firestore sin vincularlas a un usuario específico
       this.firestore.collection('ubicaciones').add({
         latitude: this.latitude,
         longitude: this.longitude,
